@@ -276,6 +276,88 @@ button:focus-visible {
 }
 
 /* ---------- Resume ---------- */
+
+.backstage-strip {
+  display: block;
+  border: 3px solid var(--bone);
+  border-radius: 18px;
+  padding: 18px 20px 20px;
+  margin-bottom: 32px;
+  text-decoration: none;
+  color: var(--bone);
+  box-shadow: 6px 6px 0 #6c5ce7;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.backstage-strip:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0 #6c5ce7;
+}
+
+.backstage-tag {
+  display: inline-block;
+  background: #6c5ce7;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.backstage-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  flex: 1;
+  min-width: 160px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid rgba(242, 239, 230, 0.3);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.badge-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+  color: #a29bfe;
+}
+
+.badge-copy {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+.badge-copy strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--bone);
+  opacity: 1;
+}
+
+.backstage-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #a29bfe;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 .resume-group {
   margin-bottom: 32px;
 }
@@ -455,6 +537,17 @@ button:focus-visible {
 
 .btn-imdb:hover {
   box-shadow: 10px 10px 0 var(--ink);
+}
+
+.btn-backstage {
+  background: #6c5ce7;
+  color: #fff;
+  border-color: var(--bone);
+  box-shadow: 6px 6px 0 var(--bone);
+}
+
+.btn-backstage:hover {
+  box-shadow: 10px 10px 0 var(--bone);
 }
 
 /* ---------- Contact ---------- */
