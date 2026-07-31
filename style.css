@@ -446,6 +446,17 @@ button:focus-visible {
   box-shadow: 10px 10px 0 var(--electric);
 }
 
+.btn-imdb {
+  background: #f5c518;
+  color: #141414;
+  border-color: #141414;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.btn-imdb:hover {
+  box-shadow: 10px 10px 0 var(--ink);
+}
+
 /* ---------- Contact ---------- */
 .contact-card {
   border: 3px solid var(--bone);
