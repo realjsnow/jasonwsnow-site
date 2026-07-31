@@ -264,55 +264,15 @@ button:focus-visible {
   border-radius: 18px;
   box-shadow: 8px 8px 0 var(--electric);
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   background: var(--ink-2);
 }
 
-/*
-  To go live: delete .reel-placeholder and uncomment the iframe below,
-  swapping VIMEO_ID for the video's Vimeo ID.
-
-  <iframe src="https://player.vimeo.com/video/VIMEO_ID?title=0&byline=0&portrait=0"
-    width="100%" height="100%" frameborder="0"
-    allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-    style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
-*/
-.reel-placeholder {
+.reel-frame iframe {
   position: absolute;
   inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
-  padding: 20px;
-}
-
-.reel-placeholder .play {
-  width: 64px;
-  height: 64px;
-  border: 3px solid var(--bone);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  opacity: 0.6;
-}
-
-.reel-placeholder .play svg {
-  width: 22px;
-  height: 22px;
-  fill: var(--bone);
-  margin-left: 3px;
-}
-
-.reel-placeholder .reel-label {
-  font-family: var(--font-display);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: 0.95rem;
-  opacity: 0.6;
+  width: 100%;
+  height: 100%;
 }
 
 /* ---------- Resume ---------- */
