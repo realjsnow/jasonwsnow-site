@@ -333,8 +333,17 @@
         <span class="section-rule"></span>
       </div>
       <div class="contact-card">
-        <p>For bookings and representation</p>
-        <button type="button" class="contact-email" id="contact-btn">Email Me <span class="arrow">&#8599;</span></button>
+        <p>For Bookings, contact representation</p>
+        <form class="contact-form" id="contact-form">
+          <input type="hidden" name="access_key" value="8d0ae2dd-05eb-44ef-8c92-e0a61a79b38d">
+          <input type="hidden" name="subject" value="New message from jasonwsnow.com">
+          <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="Message" rows="4" required></textarea>
+          <button type="submit" class="contact-submit">Send Message</button>
+          <p class="contact-status" id="contact-status" role="status"></p>
+        </form>
         <p class="contact-sub">Las Vegas, NV &middot; Non-Union</p>
       </div>
     </section>
@@ -360,6 +369,6 @@
 
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="lightbox.js"></script>
-  <script src="contact-shield.js"></script>
+  <script src="contact-form.js"></script>
 </body>
 </html>

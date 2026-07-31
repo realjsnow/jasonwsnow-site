@@ -455,15 +455,55 @@ button:focus-visible {
   box-shadow: 8px 8px 0 var(--blood);
 }
 
-.contact-email {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 14px;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+  text-align: left;
+}
+
+.botcheck {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  background: rgba(242, 239, 230, 0.06);
+  border: 2px solid rgba(242, 239, 230, 0.35);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--bone);
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(242, 239, 230, 0.5);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--acid);
+  background: rgba(242, 239, 230, 0.1);
+}
+
+.contact-submit {
+  align-self: center;
+  margin-top: 4px;
   background: none;
   border: 2px solid var(--acid);
   border-radius: 999px;
-  padding: 10px 20px;
+  padding: 10px 24px;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(0.9rem, 4vw, 1.05rem);
@@ -471,19 +511,38 @@ button:focus-visible {
   letter-spacing: 0.04em;
   color: var(--acid);
   cursor: pointer;
-  word-break: break-word;
   transition: background 0.15s ease, color 0.15s ease;
 }
 
-.contact-email:hover {
+.contact-submit:hover {
   background: var(--acid);
   color: var(--ink);
+}
+
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.contact-status {
+  min-height: 1.2em;
+  margin-top: 2px;
+  text-align: center;
+  font-size: 0.88rem;
+}
+
+.contact-status--ok {
+  color: var(--acid);
+}
+
+.contact-status--error {
+  color: var(--blood);
 }
 
 .contact-sub {
   font-size: 0.9rem;
   opacity: 0.7;
-  margin-top: 8px;
+  margin-top: 14px;
 }
 
 /* ---------- Footer ---------- */
