@@ -55,18 +55,17 @@ body {
   z-index: 2;
 }
 
-img {
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-user-drag: none;
-}
-
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--electric);
   outline-offset: 4px;
   border-radius: 6px;
+}
+
+.photo-wrap:focus-visible {
+  outline: 3px solid var(--electric);
+  outline-offset: 6px;
+  border-radius: 22px;
 }
 
 /* ---------- Hero ---------- */
@@ -76,6 +75,7 @@ button:focus-visible {
 }
 
 .photo-wrap {
+  position: relative;
   width: min(66%, 320px);
   margin: 0 auto;
   transform: rotate(-2deg);
@@ -83,6 +83,38 @@ button:focus-visible {
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 10px 10px 0 var(--acid);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.photo-wrap:hover,
+.photo-wrap:focus-visible {
+  transform: rotate(-2deg) translateY(-4px);
+  box-shadow: 14px 14px 0 var(--acid);
+}
+
+.photo-wrap::after {
+  content: "View Full Size";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 0 12px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  color: var(--bone);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.photo-wrap:hover::after,
+.photo-wrap:focus-visible::after {
+  opacity: 1;
 }
 
 .hero-photo {
@@ -464,18 +496,28 @@ button:focus-visible {
 }
 
 .contact-email {
-  display: inline-block;
-  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  background: none;
+  border: 2px solid var(--acid);
+  border-radius: 999px;
+  padding: 10px 20px;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(1rem, 4vw, 1.3rem);
+  font-size: clamp(0.9rem, 4vw, 1.05rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: var(--acid);
-  text-decoration: none;
+  cursor: pointer;
   word-break: break-word;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .contact-email:hover {
-  text-decoration: underline;
+  background: var(--acid);
+  color: var(--ink);
 }
 
 .contact-sub {
@@ -494,8 +536,115 @@ button:focus-visible {
   opacity: 0.65;
 }
 
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: rgba(10, 10, 10, 0.97);
+  display: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.lightbox.open {
+  display: block;
+  animation: lightbox-in 0.2s ease-out both;
+}
+
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lightbox-scroll {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 20px 40px;
+  box-sizing: border-box;
+}
+
+.lightbox-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.lightbox-img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 220px);
+  object-fit: contain;
+  border: 3px solid var(--bone);
+  border-radius: 14px;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--bone);
+  background: var(--ink-2);
+  border: 2px solid var(--bone);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.lightbox-close:hover {
+  background: var(--blood);
+  border-color: var(--blood);
+}
+
+.lightbox-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bone);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  box-shadow: 6px 6px 0 var(--acid);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lightbox-download:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0 var(--acid);
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
+    animation: none;
+  }
+
+  .lightbox.open {
     animation: none;
   }
 

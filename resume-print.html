@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jason Snow | R&eacute;sum&eacute; (Print)</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: #d8d8d8;
+      color: #141414;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px;
+      background: #141414;
+    }
+
+    .toolbar button,
+    .toolbar a {
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 10px 18px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .toolbar button {
+      background: #c6ff2e;
+      color: #141414;
+      border: none;
+    }
+
+    .toolbar a {
+      background: transparent;
+      color: #f2efe6;
+      border: 1px solid #555;
+    }
+
+    .sheet {
+      max-width: 8.5in;
+      margin: 28px auto 60px;
+      background: #ffffff;
+      padding: 0.6in 0.65in;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .r-header {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      border-bottom: 3px solid #141414;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    .r-photo {
+      width: 108px;
+      height: 135px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .r-id h1 {
+      font-size: 1.6rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .r-tagline {
+      font-size: 0.85rem;
+      margin-top: 4px;
+      color: #333;
+    }
+
+    .r-stats {
+      font-size: 0.82rem;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    .r-contact {
+      font-size: 0.82rem;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .r-section {
+      margin-bottom: 14px;
+    }
+
+    .r-section h2 {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: #141414;
+      color: #f2efe6;
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 3px;
+      margin-bottom: 6px;
+    }
+
+    .r-section table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+
+    .r-section td {
+      padding: 3px 0;
+      vertical-align: top;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .r-section tr:last-child td {
+      border-bottom: none;
+    }
+
+    .r-prod {
+      font-weight: 700;
+      width: 40%;
+    }
+
+    .r-role {
+      width: 28%;
+      color: #333;
+    }
+
+    .r-detail {
+      width: 32%;
+      text-align: right;
+      color: #555;
+    }
+
+    .r-skills {
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .r-footer {
+      margin-top: 18px;
+      padding-top: 10px;
+      border-top: 1px solid #ccc;
+      font-size: 0.75rem;
+      color: #555;
+      text-align: center;
+    }
+
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+
+      body {
+        background: #ffffff;
+      }
+
+      .sheet {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        max-width: none;
+      }
+
+      @page {
+        margin: 0.5in;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar no-print">
+    <button type="button" onclick="window.print()">Print / Save as PDF</button>
+    <a href="index.html">&larr; Back to site</a>
+  </div>
+
+  <main class="sheet">
+    <header class="r-header">
+      <img class="r-photo" src="assets/jason-snow-headshot.jpg" alt="Jason Snow">
+      <div class="r-id">
+        <h1>Jason Snow</h1>
+        <p class="r-tagline">Actor &middot; Non-Union &middot; Las Vegas, NV</p>
+        <p class="r-stats">Height: 6&prime;1&Prime; &nbsp;&middot;&nbsp; Weight: 150 lbs</p>
+        <p class="r-contact" id="r-contact">jasonwsnow.com</p>
+      </div>
+    </header>
+
+    <section class="r-section">
+      <h2>Television</h2>
+      <table>
+        <tr><td class="r-prod">Ghost Adventures</td><td class="r-role">Background</td><td class="r-detail">Discovery Channel</td></tr>
+        <tr><td class="r-prod">Statute Of Limitations</td><td class="r-role">Supporting</td><td class="r-detail">Film Rise</td></tr>
+        <tr><td class="r-prod">Barry Manilow&rsquo;s A Very Barry Christmas</td><td class="r-role">Supporting</td><td class="r-detail">Dir. Matt Askew</td></tr>
+      </table>
+    </section>
+
+    <section class="r-section">
+      <h2>Film</h2>
+      <table>
+        <tr><td class="r-prod">Prodrome</td><td class="r-role">Principal</td><td class="r-detail">Dir. Jason Snow</td></tr>
+      </table>
+    </section>
+
+    <section class="r-section">
+      <h2>Theater</h2>
+      <table>
+        <tr><td class="r-prod">Battlebots: Destructathon</td><td class="r-role">Lead</td><td class="r-detail">Giant Nut Productions</td></tr>
+        <tr><td class="r-prod">Rocky Horror Pizza Show</td><td class="r-role">Frank N&rsquo; Furter</td><td class="r-detail">Pizza Bib</td></tr>
+        <tr><td class="r-prod">The Compton Manor</td><td class="r-role">Supporting</td><td class="r-detail">Rebecca O&rsquo;Konski</td></tr>
+      </table>
+    </section>
+
+    <section class="r-section">
+      <h2>Commercial</h2>
+      <table>
+        <tr><td class="r-prod">Uber x DELTA</td><td class="r-role">Lead</td><td class="r-detail">Uber</td></tr>
+        <tr><td class="r-prod">Rocky Horror Pizza Show</td><td class="r-role">Frank N&rsquo; Furter</td><td class="r-detail">Pizza Bib</td></tr>
+        <tr><td class="r-prod">Horizon S Projectors</td><td class="r-role">Model / Actor</td><td class="r-detail">Dir. XGIMI</td></tr>
+        <tr><td class="r-prod">Money 20/20 Conference</td><td class="r-role">Host</td><td class="r-detail">Dir. Naomi Hartridge-Dawes</td></tr>
+        <tr><td class="r-prod">TOSSIT</td><td class="r-role">Brand Spokesperson</td><td class="r-detail">Dir. Javier Ruedes</td></tr>
+        <tr><td class="r-prod">Master Kim&rsquo;s Korean BBQ</td><td class="r-role">Lead</td><td class="r-detail">Dir. Kim Dejong</td></tr>
+        <tr><td class="r-prod">Eric Roy LLP</td><td class="r-role">Lead</td><td class="r-detail">Dir. James Farra</td></tr>
+        <tr><td class="r-prod">Neutonic</td><td class="r-role">Lead</td><td class="r-detail">Dir. Jacob Jades</td></tr>
+      </table>
+    </section>
+
+    <section class="r-section">
+      <h2>Social Media</h2>
+      <table>
+        <tr><td class="r-prod">AMP with Kai Cenat</td><td class="r-role">Supporting</td><td class="r-detail">Dir. AMP</td></tr>
+        <tr><td class="r-prod">TikTok, Instagram &amp; YouTube</td><td class="r-role">100K Followers</td><td class="r-detail">@realjsnow</td></tr>
+      </table>
+    </section>
+
+    <section class="r-section">
+      <h2>Training</h2>
+      <table>
+        <tr><td class="r-prod">Chekhov Technique</td><td class="r-role">Abbey Rey Studios</td><td class="r-detail">Coach: Abbey Rey</td></tr>
+      </table>
+    </section>
+
+    <section class="r-section">
+      <h2>Skills</h2>
+      <p class="r-skills">Basketball, Body Surfing, Ice Skating, Jet Skier, Kayaker, Shooting &ndash; Revolver/Automatic, Shooting &ndash; Rifle, Skateboarding, Snowboarding, Soccer, Swimming &ndash; Backstroke, Swimming &ndash; Breast Stroke, Water Skiing, Weight Lifting, Drums, Gamer (Console), Licensed Driver, Voiceover, Whistler</p>
+    </section>
+
+    <p class="r-footer">Full reel and credits at jasonwsnow.com</p>
+  </main>
+
+  <script>
+    document.getElementById('r-contact').textContent = atob('amFzb253YWRlc25vd0BnbWFpbC5jb20=') + '  ·  jasonwsnow.com';
+  </script>
+</body>
+</html>

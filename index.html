@@ -63,8 +63,7 @@
           "https://www.facebook.com/profile.php?id=61565419013479",
           "https://realjsnow.com",
           "https://jasonsnowphotos.com",
-          "https://theprodrome.com",
-          "https://resumes.actorsaccess.com/jasonsnow"
+          "https://theprodrome.com"
         ]
       },
       {
@@ -93,7 +92,7 @@
   <div class="page">
     <!-- Hero -->
     <header class="hero">
-      <div class="photo-wrap">
+      <div class="photo-wrap" id="hero-photo-trigger" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View and download full-size headshot">
         <img class="hero-photo" src="assets/headshot.webp" alt="Jason Snow headshot">
       </div>
       <h1 class="name">Jason Snow</h1>
@@ -299,8 +298,8 @@
         </div>
       </div>
 
-      <a class="btn" href="https://resumes.actorsaccess.com/jasonsnow" target="_blank" rel="noopener" style="margin-top: 6px;">
-        <span class="btn-label">Full R&eacute;sum&eacute; on Actors Access</span>
+      <a class="btn" href="resume-print.html" target="_blank" rel="noopener" style="margin-top: 6px;">
+        <span class="btn-label">Print R&eacute;sum&eacute;</span>
         <span class="arrow">&#8599;</span>
       </a>
     </section>
@@ -335,7 +334,7 @@
       </div>
       <div class="contact-card">
         <p>For bookings and representation</p>
-        <a class="contact-email" href="mailto:jasonwadesnow@gmail.com">jasonwadesnow@gmail.com</a>
+        <button type="button" class="contact-email" id="contact-btn">Email Me <span class="arrow">&#8599;</span></button>
         <p class="contact-sub">Las Vegas, NV &middot; Non-Union</p>
       </div>
     </section>
@@ -344,6 +343,22 @@
   </div>
   </main>
 
-  <script src="protect-images.js"></script>
+  <!-- Lightbox lives outside <main> on purpose: .photo-wrap has a CSS
+       transform, and a transformed ancestor becomes the containing block for
+       position:fixed descendants, which would break full-viewport sizing. -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Jason Snow headshot, full size">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <div class="lightbox-scroll">
+      <figure class="lightbox-figure">
+        <img class="lightbox-img" id="lightbox-img" src="assets/jason-snow-headshot.jpg" alt="Jason Snow headshot" draggable="false">
+        <a class="lightbox-download" href="assets/jason-snow-headshot.jpg" download="Jason-Snow-Headshot.jpg">
+          Download Headshot <span class="arrow">&#8595;</span>
+        </a>
+      </figure>
+    </div>
+  </div>
+
+  <script src="lightbox.js"></script>
+  <script src="contact-shield.js"></script>
 </body>
 </html>
