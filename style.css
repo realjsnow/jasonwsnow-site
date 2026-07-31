@@ -264,7 +264,7 @@ button:focus-visible {
   border-radius: 18px;
   box-shadow: 8px 8px 0 var(--electric);
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   background: var(--ink-2);
 }
 
