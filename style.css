@@ -148,6 +148,14 @@ button:focus-visible {
   margin: 0 8px;
 }
 
+.tagline-sub {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  font-weight: 400;
+  opacity: 0.55;
+  letter-spacing: 0.01em;
+}
+
 /* ---------- Socials ---------- */
 .socials {
   margin: 22px 0 0;
