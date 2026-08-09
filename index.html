@@ -136,6 +136,15 @@
 
   <div class="page">
 
+    <!-- Mode switch -->
+    <div class="mode-switch" role="tablist" aria-label="Resume type">
+      <button type="button" class="mode-btn is-active" data-mode="acting" role="tab" id="tab-acting" aria-selected="true" aria-controls="panel-acting">Acting</button>
+      <button type="button" class="mode-btn" data-mode="video" role="tab" id="tab-video" aria-selected="false" aria-controls="panel-video">Video</button>
+    </div>
+
+    <!-- Acting mode -->
+    <div class="mode-panel" data-mode-panel="acting" id="panel-acting" role="tabpanel" aria-labelledby="tab-acting">
+
     <!-- Reel -->
     <section class="section" id="reel">
       <div class="section-head">
@@ -327,6 +336,91 @@
       </a>
     </section>
 
+    </div>
+    <!-- /Acting mode -->
+
+    <!-- Video mode -->
+    <div class="mode-panel" data-mode-panel="video" id="panel-video" role="tabpanel" aria-labelledby="tab-video" hidden>
+
+      <span class="mockup-flag">Mockup &mdash; placeholder content</span>
+
+      <!-- Video Reel -->
+      <section class="section" id="video-reel">
+        <div class="section-head">
+          <h2 class="section-tag">Video Reel</h2>
+          <span class="section-rule"></span>
+        </div>
+        <div class="reel-frame">
+          <div class="reel-placeholder">
+            <div class="play">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="reel-label">Video reel coming soon</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Resume -->
+      <section class="section" id="video-resume">
+        <div class="section-head">
+          <h2 class="section-tag">Video Resume</h2>
+          <span class="section-rule"></span>
+        </div>
+
+        <div class="resume-group">
+          <span class="resume-group-title">Directing</span>
+          <div class="credit">
+            <span class="credit-production">[Project Title]</span>
+            <span class="credit-role">Director</span>
+            <span class="credit-detail">[Client / Year]</span>
+          </div>
+          <div class="credit">
+            <span class="credit-production">[Project Title]</span>
+            <span class="credit-role">Director</span>
+            <span class="credit-detail">[Client / Year]</span>
+          </div>
+        </div>
+
+        <div class="resume-group">
+          <span class="resume-group-title">Videography</span>
+          <div class="credit">
+            <span class="credit-production">[Project Title]</span>
+            <span class="credit-role">Videographer / Editor</span>
+            <span class="credit-detail">[Client / Year]</span>
+          </div>
+          <div class="credit">
+            <span class="credit-production">[Project Title]</span>
+            <span class="credit-role">Videographer / Editor</span>
+            <span class="credit-detail">[Client / Year]</span>
+          </div>
+        </div>
+
+        <div class="resume-group">
+          <span class="resume-group-title">Clients</span>
+          <div class="chips">
+            <span class="chip">[Client]</span>
+            <span class="chip">[Client]</span>
+            <span class="chip">[Client]</span>
+            <span class="chip">[Client]</span>
+          </div>
+        </div>
+
+        <div class="resume-group">
+          <span class="resume-group-title">Equipment</span>
+          <div class="chips">
+            <span class="chip">[Camera Body]</span>
+            <span class="chip">[Lens Kit]</span>
+            <span class="chip">[Gimbal]</span>
+            <span class="chip">[Audio]</span>
+            <span class="chip">[Lighting]</span>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+    <!-- /Video mode -->
+
     <!-- More -->
     <section class="section" id="more">
       <div class="section-head">
@@ -401,5 +495,6 @@
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="lightbox.js"></script>
   <script src="contact-form.js"></script>
+  <script src="mode-switch.js"></script>
 </body>
 </html>

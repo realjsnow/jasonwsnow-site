@@ -238,6 +238,59 @@ button:focus-visible {
   }
 }
 
+/* ---------- Mode switch ---------- */
+.mode-switch {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 44px;
+  padding: 4px;
+  border: 2px solid var(--bone);
+  border-radius: 999px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mode-btn {
+  flex: 1;
+  border: none;
+  background: none;
+  color: var(--bone);
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: background 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+
+.mode-btn.is-active {
+  background: var(--acid);
+  color: var(--ink);
+  opacity: 1;
+}
+
+.mockup-flag {
+  display: block;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  color: var(--blood);
+  border: 1px dashed var(--blood);
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin: 56px auto 0;
+  max-width: fit-content;
+}
+
 /* ---------- Section scaffolding ---------- */
 .section {
   padding: 56px 0 0;
