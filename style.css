@@ -247,7 +247,7 @@ button:focus-visible {
   padding: 4px;
   border: 2px solid var(--bone);
   border-radius: 999px;
-  max-width: 320px;
+  max-width: 380px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -261,8 +261,9 @@ button:focus-visible {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 0.85rem;
-  padding: 10px 20px;
+  font-size: clamp(0.72rem, 3vw, 0.85rem);
+  white-space: nowrap;
+  padding: 10px 16px;
   border-radius: 999px;
   cursor: pointer;
   opacity: 0.6;
